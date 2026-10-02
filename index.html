@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#fff8f4">
+  <title>好き顔9選｜v10</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="top"><div class="brand">MY FAVORITE FACES</div><span class="version">VERSION 10</span></header>
+    <section id="intro" class="intro panel">
+      <p class="eyebrow">あなたの「好き」を見つけよう</p><h1>好き顔<br><em>9選</em></h1>
+      <p class="lead">メンバーを見ながら、気になる人を選んでね。<br>最後にあなたのTOP9が決まります。</p>
+      <div class="how"><span>01　全員をチェック</span><span>02　好きな人を選ぶ</span><span>03　TOP9完成！</span></div>
+      <button id="start" class="primary">はじめる <b>→</b></button>
+      <p id="load-note" class="note">メンバー一覧を読み込んでいます…</p>
+      <label id="csv-picker-wrap" class="csv-picker hidden" style="display:block;width:max-content;max-width:100%;margin:12px auto 0;border:1px solid #f2cbd4;border-radius:99px;padding:10px 16px;color:#9b5264;font-size:12px;font-weight:700;cursor:pointer">members.csv を選ぶ <input id="csv-picker" type="file" accept=".csv,text/csv" style="display:block;margin:8px auto 0;max-width:220px"></label>
+    </section>
+    <section id="game" class="panel hidden">
+      <div class="game-head"><div><p id="phase" class="eyebrow"></p><h2 id="round-title"></h2></div><button id="back" class="quiet">← 戻る</button></div>
+      <div class="progress"><div id="progress-fill"></div></div><p id="progress-label" class="progress-label"></p>
+      <p id="prompt" class="prompt"></p><div id="cards" class="cards"></div>
+      <div class="actions"><span id="picked-label">0人選択中</span><button id="next" class="primary" disabled>次へ <b>→</b></button></div>
+    </section>
+    <section id="result" class="panel hidden">
+      <p class="eyebrow">YOUR FAVORITE NINE</p><h2>あなたの好き顔9選</h2><p class="result-lead">今日のあなたが選んだ9人はこちら！</p>
+      <div id="winners" class="winners"></div>
+      <button id="restart" class="primary">もう一度あそぶ <b>↻</b></button>
+    </section>
+    <footer>写真はあとから追加できます。未登録のメンバーはプレースホルダーで表示されます。</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
